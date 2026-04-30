@@ -35,28 +35,6 @@ export function Footer() {
           Transformando rotina em ritual
         </p>
 
-        <div
-          className="mb-8 py-6 px-8"
-          style={{
-            background: "rgba(201, 168, 76, 0.1)",
-            border: "1px solid rgba(201, 168, 76, 0.3)",
-          }}
-        >
-          <p
-            style={{
-              color: "#1A2E1F",
-              fontSize: "0.95rem",
-              lineHeight: "1.8",
-            }}
-          >
-            Produto cosmetológico de Grau de Risco 2, conforme RDC nº 7/2015.
-            <br />
-            Produzido segundo Boas Práticas de Fabricação (RDC nº 752/2022).
-            <br />
-            Rotulagem em conformidade com legislação ANVISA vigente.
-          </p>
-        </div>
-
         <p
           style={{
             color: "#c4c4c4",
