@@ -52,11 +52,18 @@ export function OurStory() {
             </p>
           </div>
 
-          <div className="relative">
+          <div className="flex flex-col gap-4">
             <div
-              className="aspect-[3/4] bg-cover bg-center"
+              className="aspect-[4/3] bg-cover bg-center"
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1654951918037-f63e6a037083?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxsYXZlbmRlciUyMGZsb3dlcnMlMjBjbG9zZSUyMHVwfGVufDF8fHx8MTc3NzQ5NjgwNXww&ixlib=rb-4.1.0&q=80&w=1080')`,
+                backgroundImage: `url('/ourHistory1.jpeg')`,
+                boxShadow: "0 20px 60px rgba(0, 0, 0, 0.25)",
+              }}
+            />
+            <div
+              className="aspect-[4/3] bg-cover bg-center"
+              style={{
+                backgroundImage: `url('/ourHistory2.jpeg')`,
                 boxShadow: "0 20px 60px rgba(0, 0, 0, 0.25)",
               }}
             />

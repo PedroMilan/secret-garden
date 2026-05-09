@@ -22,15 +22,42 @@ export function Product() {
   ];
 
   const composition = [
-    { ingredient: "Cera de Abelha", percentage: 36 },
-    { ingredient: "Óleo de Jojoba", percentage: 32 },
-    { ingredient: "Óleo de Amêndoas Doce", percentage: 20 },
-    { ingredient: "OE Lavanda", percentage: 5 },
-    { ingredient: "Cera de Carnaúba", percentage: 4 },
-    { ingredient: "Bergamota FCF", percentage: 2 },
-    { ingredient: "Vitamina E", percentage: 1 },
+    {
+      ingredient: "Cera de abelha",
+      description:
+        "Forma uma base sólida que cria um filme protetor na pele, ajudando na fixação e liberação gradual da fragrância.",
+    },
+    {
+      ingredient: "Cera de carnaúba",
+      description:
+        "Aumenta a resistência ao calor e confere mais estabilidade e um acabamento mais refinado ao produto.",
+    },
+    {
+      ingredient: "Óleo de jojoba",
+      description:
+        "Possui alta afinidade com a pele, promovendo hidratação leve e prolongando a duração do aroma.",
+    },
+    {
+      ingredient: "Óleo de amêndoas doce",
+      description:
+        "Melhora a espalhabilidade e proporciona maciez e nutrição à pele.",
+    },
+    {
+      ingredient: "Óleo essencial de lavanda",
+      description:
+        "Contribui para o relaxamento e sensação de calma, além de adicionar uma nota floral suave.",
+    },
+    {
+      ingredient: "Óleo essencial de bergamota (FCF)",
+      description:
+        "Traz frescor cítrico e auxilia na sensação de bem-estar, sem risco de fototoxicidade.",
+    },
+    {
+      ingredient: "Vitamina E",
+      description:
+        "Atua como antioxidante, ajudando a preservar a estabilidade e a qualidade da formulação.",
+    },
   ];
-
   return (
     <section className="relative py-32 px-6 md:px-12 lg:px-24">
       <div
@@ -108,41 +135,30 @@ export function Product() {
             Composição
           </h3>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {composition.map((item, index) => (
-              <div key={index} className="flex items-center gap-6">
-                <div className="flex-1">
-                  <div className="flex justify-between mb-2">
-                    <span
-                      style={{
-                        color: "#1A2E1F",
-                        fontSize: "1.05rem",
-                        fontWeight: "500",
-                      }}
-                    >
-                      {item.ingredient}
-                    </span>
-                    <span
-                      style={{
-                        color: "#B8860B",
-                        fontSize: "1.05rem",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {item.percentage}%
-                    </span>
-                  </div>
-                  <div className="h-2 bg-white/50 overflow-hidden">
-                    <div
-                      className="h-full transition-all duration-1000"
-                      style={{
-                        width: `${item.percentage}%`,
-                        background:
-                          "linear-gradient(90deg, var(--forest-medium), var(--gold))",
-                      }}
-                    />
-                  </div>
-                </div>
+              <div key={index}>
+                <p
+                  style={{
+                    color: "var(--forest-dark)",
+                    fontSize: "1.05rem",
+                    fontWeight: "600",
+                    marginBottom: "0.3rem",
+                    fontFamily: "var(--font-serif)",
+                  }}
+                >
+                  {item.ingredient}
+                </p>
+                <p
+                  style={{
+                    color: "#1A2E1F",
+                    fontSize: "0.95rem",
+                    lineHeight: "1.7",
+                    fontStyle: "italic",
+                  }}
+                >
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>

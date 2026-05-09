@@ -1,22 +1,4 @@
 export function Pricing() {
-  const priceCards = [
-    {
-      label: "Custo de materiais",
-      value: "R$ 5,69",
-      description: "Insumos de alta qualidade",
-    },
-    {
-      label: "Custo total",
-      value: "R$ 6,83",
-      description: "Produção e embalagem",
-    },
-    {
-      label: "Preço de venda",
-      value: "R$ 27,50",
-      description: "Valor sugerido ao público",
-    },
-  ];
-
   return (
     <section className="relative py-32 px-6 md:px-12 lg:px-24">
       <div
@@ -28,9 +10,9 @@ export function Pricing() {
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-6xl mx-auto flex flex-col items-center">
         <h2
-          className="text-center mb-20 italic fade-in-section opacity-0 translate-y-8 transition-all duration-1000"
+          className="text-center mb-20 italic translate-y-8 transition-all duration-1000"
           style={{
             fontFamily: "var(--font-serif)",
             fontSize: "clamp(2.5rem, 5vw, 4rem)",
@@ -40,56 +22,42 @@ export function Pricing() {
           Investimento
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {priceCards.map((card, index) => (
-            <div
-              key={index}
-              className="p-10 text-center fade-in-section opacity-0 translate-y-8 transition-all duration-1000"
-              style={{
-                background: "rgba(201, 168, 76, 0.1)",
-                border: "1px solid var(--gold)",
-                boxShadow: "0 10px 40px rgba(0, 0, 0, 0.3)",
-                transitionDelay: `${index * 100}ms`,
-              }}
-            >
-              <p
-                className="mb-4"
-                style={{
-                  color: "#1A2E1F",
-                  fontSize: "1rem",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  fontWeight: "500",
-                }}
-              >
-                {card.label}
-              </p>
-              <p
-                className="mb-4"
-                style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
-                  color: "#D4AF37",
-                }}
-              >
-                {card.value}
-              </p>
-              <p
-                style={{
-                  color: "#c4c4c4",
-                  fontSize: "1rem",
-                }}
-              >
-                {card.description}
-              </p>
-            </div>
-          ))}
+        <div
+          className="p-14 text-center  translate-y-8 transition-all duration-1000 mb-16"
+          style={{
+            background: "rgba(201, 168, 76, 0.1)",
+            border: "1px solid var(--gold)",
+            boxShadow: "0 10px 40px rgba(0, 0, 0, 0.3)",
+          }}
+        >
+          <p
+            className="mb-4"
+            style={{
+              color: "#c4c4c4",
+              fontSize: "1rem",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              fontWeight: "500",
+            }}
+          >
+            Preço de venda
+          </p>
+          <p
+            style={{
+              fontFamily: "var(--font-serif)",
+              fontSize: "clamp(3rem, 6vw, 5rem)",
+              color: "#D4AF37",
+              lineHeight: 1,
+            }}
+          >
+            R$ 27,50
+          </p>
         </div>
 
         <p
           className="text-center fade-in-section opacity-0 translate-y-8 transition-all duration-1000"
           style={{
-            color: "#FDFBF7",
+            color: "var(--gold)",
             fontSize: "1.25rem",
             letterSpacing: "0.05em",
           }}

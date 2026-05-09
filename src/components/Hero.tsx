@@ -1,3 +1,4 @@
+import { Leaf } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
@@ -42,7 +43,7 @@ export function Hero() {
 
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
         <h1
-          className="mb-6 italic tracking-wide"
+          className="mb-6 italic tracking-wide flex flex-row items-center gap-3"
           style={{
             fontFamily: "var(--font-serif)",
             fontSize: "clamp(3rem, 10vw, 7rem)",
@@ -50,7 +51,7 @@ export function Hero() {
             textShadow: "0 4px 20px rgba(0, 0, 0, 0.5)",
           }}
         >
-          Alba Serena
+          Alba Serena <Leaf size={58} />
         </h1>
 
         <p
